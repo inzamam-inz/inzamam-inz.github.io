@@ -1,0 +1,505 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+/* color */
+:root {
+    --primary: #1a253f;
+    --dark: #151A33;
+    --secondary: #2b55cc;
+    --info: #4d79f6;
+    --ternary: #848db3;
+    --pure: #eff2f9;
+    --fade: #7081b9;
+    --mild: #8997bd;
+    --footer: #212A4A;
+    --black: #060b1b;
+    --twitter: #4ac7ec;
+    --dribbble: #ff5da0;
+    --success: #1ecab8;
+    --danger: #f1646c;
+    --dark-blue: #28365f;
+    --dark-gray: #171f33;
+    --yellow: #f3c74d;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto auto;
+}
+
+nav {
+    background-color: var(--primary);
+    background: solid;
+    padding: 1.6rem 0;
+}
+
+nav .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .inner .logo {
+    text-transform: uppercase;
+    color: var(--pure);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.logo small {
+    color: var(--pure);
+    text-shadow: 1px 1px red;
+}
+
+.logo a {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.logo small {
+    text-transform: none;
+    font-size: 13px;
+}
+
+nav .inner .logo i {
+    color: red;
+    font-size: 25px;
+    text-shadow: 1px 1px wheat;
+}
+
+nav .inner button {
+    background-color: var(--info);
+    border: none;
+    padding: 0.6rem 1rem;
+    color: var(--pure);
+    font-size: 13px;
+    border-radius: 4px;
+    margin-right: 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+nav .inner button i {
+    font-size: 15px;
+}
+
+.profile {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile .left {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.profile .right {
+    flex: 1;
+}
+
+.profile .left .picture img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    object-fit: cover;
+} 
+
+.profile .left .picture span {
+    background-color: var(--info);
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pure);
+    cursor: pointer;
+    position: relative;
+    left: 110px;
+    bottom: 35px;
+}
+
+.profile .left h2 {
+    color: var(--fade);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.profile .left p {
+    color: var(--mild);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.hide {
+    color: var(--ternary);
+}
+
+.profile .right .contactinfo {
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+}
+
+.profile .right .contactinfo li {
+    color: var(--ternary);
+    margin: .7rem;
+}
+
+.profile .right .contactinfo li i {
+    font-size: 18px;;
+    margin-right: .3rem;
+}
+
+.profile .right .profile-link {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.profile .right .profile-link li {
+    color: var(--ternary);
+    margin: .7rem;
+}
+
+.profile .right .profile-link li i {
+    font-size: 38px;;
+    margin-right: .3rem;
+    color: var(--pure);
+}
+
+.profile .right .profile-link li i:hover {
+    color: var(--info);
+}
+
+section {
+    padding: 3rem;
+    margin-top: 50px; 
+}
+
+.about, .education-experience, .project-skill, .achivement, .online-judge-handle, .contact {
+    background-color: black;
+}
+
+.section_heading {
+    color: var(--pure);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 1px rgba(40, 54, 95, 0,1);
+}
+
+.about h1::before, .education-experience h1::before, .project-skill h1::before, .achivement h1::before, .online-judge-handle h1::before, .contact h1::before {
+    content: '';
+    margin-right: 15px;
+    border-left: 6px solid var(--danger);
+}
+
+.describe {
+    color: var(--ternary);
+}
+
+.inzamam {
+    color: var(--info);
+    margin-bottom: 10px;
+}
+
+.edu-exp-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.heading i {
+    color: var(--fade);
+    font-size: 45px;
+}
+
+.heading i:hover {
+    color: var(--info);
+}
+
+.heading h5 {
+    font-size: 16px;
+    color: var(--mild);
+}
+
+.schools h5, .jobs h5, .tasks h5, .awards h5 {
+    color: var(--fade);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.schools p, .jobs p, .tasks p, .awards p {
+    color: var(--ternary);
+    font-size: 13px;
+    letter-spacing: .1px;
+}
+
+.items {
+    position: relative;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.schools, .jobs {
+    border-left: 2px dotted var(--fade);
+}
+
+h5::before {
+    content: '';
+    position:absolute;
+    left: 0;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid var(--info);
+    border-radius: 20px;
+    margin-left: -21px;
+}
+
+.project-skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tasks a {
+    text-decoration: none;
+    color: var(--ternary);
+    font-size: 13px;
+    letter-spacing: .1px;
+}
+
+.tasks a:hover {
+    color: var(--info);
+    text-decoration: underline;
+}
+
+.achivement-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.count-up {
+    background-color: var(--black);
+}
+
+.count-up-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.count {
+    display: flex;
+    align-items: center;
+}
+
+.count i {
+    font-size: 40px;
+    margin-right: 5px;
+}
+
+.count span:hover {
+    color: red;
+}
+
+.count:nth-child(1) i {
+    color: var(--yellow);
+}
+
+.count:nth-child(2) i {
+    color: var(--success);
+}
+
+.count:nth-child(3) i {
+    color: var(--info);
+}
+
+.count:nth-child(4) i {
+    color: var(--dribbble);
+}
+
+.count h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--fade);
+    margin-bottom: 8px;
+}
+
+.count h5 {
+    font-size: 15px;
+    color: var(--pure);
+}
+
+.oj-handle-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.handle img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.handle a:hover {
+    color: var(--info);
+    text-decoration: underline;
+}
+.handle a {
+    color: var(--mild);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 50px;
+    align-items: center;
+}
+
+.way {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;   
+    margin-bottom: 15px;
+}
+
+.way h4 {
+    color: var(--mild);
+    margin-bottom: 5px;
+}
+
+.way span {
+    font-size: 15px;
+    color: var(--fade);
+}
+
+.way i {
+    color: var(--info);
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.name-email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.name-email div, .say div {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-email label, .say label {
+    color: var(--ternary);
+    margin-bottom: 5px;
+}
+
+.name-email input, .say textarea {
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid var(--mild);
+    color: var(--fade);
+}
+
+.send button {
+    background-color: var(--info);
+    color: var(--pure);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    margin-top: 6px;
+    transition: all .3s ease-in-out;
+}
+
+.send button:hover, .inner button:hover {
+    background: var(--secondary);
+}
+
+footer {
+    color: var(--fade);
+    background-color: var(--footer);
+    text-align: center;
+    padding: .5rem;
+}
+
+/* Media Queries */
+@media (max-width: 800px ) {
+    section.profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .edu-exp-container, .project-skill-container, .count-up-container, .oj-handle-container, .contact-container, .name-email {
+        display: block;
+    }
+
+    .education, .project, .count, .handle, .information {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 500px ) {
+    .profile .left {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 50px;
+    }
+}
