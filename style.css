@@ -299,7 +299,7 @@ h5::before {
 }
 
 .project {
-    margin-right: 100px;
+    text-align: justify;
 }
 
 .tasks p {
