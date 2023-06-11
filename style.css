@@ -266,7 +266,8 @@ section {
 
 .schools p, .jobs p, .tasks p, .awards p {
     color: var(--ternary);
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 500;
     letter-spacing: .1px;
 }
 
@@ -297,16 +298,32 @@ h5::before {
     grid-template-columns: 1fr 1fr;
 }
 
+.project {
+    margin-right: 100px;
+}
+
+.tasks p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
 .tasks a {
     text-decoration: none;
-    color: var(--ternary);
-    font-size: 13px;
+    color: var(--info);
     letter-spacing: .1px;
 }
 
 .tasks a:hover {
     color: var(--info);
     text-decoration: underline;
+}
+
+.link-info {
+    margin-top: 7px;
+}
+
+.project-info {
+    margin-top: 7px;
 }
 
 .achivement-container {
@@ -453,7 +470,7 @@ h5::before {
     background-color: var(--info);
     color: var(--pure);
     border: none;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     padding: .5rem 2rem;
     margin-top: 6px;
