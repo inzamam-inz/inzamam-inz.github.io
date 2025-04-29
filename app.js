@@ -3,7 +3,7 @@ function moreDesignation() {
 }
 
 function moreDescribe() { 
-    document.getElementById("hideDescribe").innerHTML = " I am interested in competitive programming.";
+    document.getElementById("hideDescribe").innerHTML = "has sharpened my problem-solving skills. I love writing code, and my quick learning ability helps me adapt to any technology or framework.";
 }
 
 function downloadPDF() {
