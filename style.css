@@ -173,12 +173,11 @@ nav .inner button i {
 
 .profile .right .contactinfo li {
     color: var(--ternary);
-    margin: .7rem;
+    margin: .3rem, 0px;
 }
 
 .profile .right .contactinfo li i {
-    font-size: 18px;;
-    margin-right: .3rem;
+    font-size: 18px;
 }
 
 .profile .right .profile-link {
@@ -208,7 +207,7 @@ section {
     margin-top: 50px; 
 }
 
-.about, .education-experience, .project-skill, .achivement, .online-judge-handle, .contact {
+.about, .education-experience, .achievement-skill, .project, .online-judge-handle, .contact {
     background-color: black;
 }
 
@@ -220,7 +219,7 @@ section {
     text-shadow: 0 0 1px rgba(40, 54, 95, 0,1);
 }
 
-.about h1::before, .education-experience h1::before, .project-skill h1::before, .achivement h1::before, .online-judge-handle h1::before, .contact h1::before {
+.about h1::before, .education-experience h1::before, .achievement-skill h1::before, .project h1::before, .online-judge-handle h1::before, .contact h1::before {
     content: '';
     margin-right: 15px;
     border-left: 6px solid var(--danger);
@@ -293,7 +292,7 @@ h5::before {
     margin-left: -21px;
 }
 
-.project-skill-container {
+.achievement-skill-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -326,7 +325,7 @@ h5::before {
     margin-top: 7px;
 }
 
-.achivement-container {
+.project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -495,11 +494,11 @@ footer {
         align-items: flex-start;
     }
     
-    .edu-exp-container, .project-skill-container, .count-up-container, .oj-handle-container, .contact-container, .name-email {
+    .edu-exp-container, .achievement-skill-container, .count-up-container, .oj-handle-container, .contact-container, .name-email {
         display: block;
     }
 
-    .education, .project, .count, .handle, .information {
+    .education, .project, .count, .handle, .information, .achievement {
         margin-bottom: 50px;
     }
 }

@@ -13,3 +13,16 @@ function downloadPDF() {
     link.download = 'my-pdf-file.pdf';
     link.click();
 }
+
+function addFeedback() {
+    const name = document.querySelector('.name-email input[type="text"]').value;
+    const email = document.querySelector('.name-email input[type="email"]').value;
+    const message = document.querySelector('.say textarea').value;
+
+    // Construct the email body 
+    const mailto = "inzamamulhaquesobuz655@gmail.com";
+    const body = encodeURIComponent(`${message}`);
+
+    // Trigger the email client
+    window.location.href = `mailto:${mailto}?&body=${body}`;
+}
