@@ -1,550 +1,704 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="shortcut icon" href="/img/inzamam (3).jpg">
     <link rel="stylesheet" href="style.css">
-    <title>Md. Inzamam-Ul Haque Sobuz</title>
+    <title>Inzamam's Portfolio</title>
 </head>
 
 <body>
-    <nav>
-        <div class="container inner">
-            <div class="logo">
-                <i class="uil uil-cell"></i>
-                <a>
-                    INZAMAM'S
-                    <small>
-                        Portfolio
-                    </small>  
-                </a> 
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile-section">
+                    <h1 class="name">MD INZAMAM-UL HAQUE SOBUZ</h1>
+                    <p class="role">Software Engineer</p>
+                    <p class="location">Kagoshima, Japan</p>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a href="#intro" class="nav-item active"># intro</a>
+                    <a href="#work" class="nav-item"># work</a>
+                    <a href="#projects" class="nav-item"># projects</a>
+                    <a href="#achievements" class="nav-item"># achievements</a>
+                    <a href="#skills" class="nav-item"># skills</a>
+                    <a href="#contact" class="nav-item"># contact</a>
+                </nav>
             </div>
-            <div>
-                <button>
-                    <a href = "INZAMAM_CV.pdf" style="text-decoration: none;color: white;" target="_blank">
-                        <b>
-                            <i class="uil uil-arrow-to-bottom"></i>
-                            Download My Resume
-                        </b>
+
+            <div class="sidebar-bottom">
+                <div class="theme-switcher">
+                    <button class="theme-btn" id="themeBtn" title="Change Theme">
+                        <i class="uil uil-palette"></i>
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/inzamam-inz" target="_blank" title="GitHub">
+                        <i class="uil uil-github"></i>
                     </a>
-                </button>
+                    <a href="https://www.linkedin.com/in/inzamam-inz/" target="_blank" title="LinkedIn">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                    <a href="mailto:inzamamulhaquesobuz655@gmail.com" title="Email">
+                        <i class="uil uil-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="resume-btn">
+                    <a href="INZAMAM_CV.pdf" target="_blank">
+                        <i class="uil uil-download-alt"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Theme Selector Modal -->
+        <div class="theme-modal" id="themeModal">
+            <div class="theme-modal-content">
+                <div class="theme-modal-header">
+                    <h3>Choose Your Theme</h3>
+                    <button class="theme-modal-close" id="themeModalClose">
+                        <i class="uil uil-times"></i>
+                    </button>
+                </div>
+                <div class="theme-grid">
+                    <button class="theme-option" data-theme="blue">
+                        <div class="theme-colors">
+                            <span style="background: #2563eb;"></span>
+                            <span style="background: #3b82f6;"></span>
+                            <span style="background: #1d4ed8;"></span>
+                        </div>
+                        <span class="theme-name">Professional Blue</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="purple">
+                        <div class="theme-colors">
+                            <span style="background: #7c3aed;"></span>
+                            <span style="background: #8b5cf6;"></span>
+                            <span style="background: #6d28d9;"></span>
+                        </div>
+                        <span class="theme-name">Vibrant Purple</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="teal">
+                        <div class="theme-colors">
+                            <span style="background: #0891b2;"></span>
+                            <span style="background: #06b6d4;"></span>
+                            <span style="background: #0e7490;"></span>
+                        </div>
+                        <span class="theme-name">Modern Teal</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="orange">
+                        <div class="theme-colors">
+                            <span style="background: #ea580c;"></span>
+                            <span style="background: #f97316;"></span>
+                            <span style="background: #c2410c;"></span>
+                        </div>
+                        <span class="theme-name">Energetic Orange</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="green">
+                        <div class="theme-colors">
+                            <span style="background: #059669;"></span>
+                            <span style="background: #10b981;"></span>
+                            <span style="background: #047857;"></span>
+                        </div>
+                        <span class="theme-name">Fresh Green</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="indigo">
+                        <div class="theme-colors">
+                            <span style="background: #4f46e5;"></span>
+                            <span style="background: #6366f1;"></span>
+                            <span style="background: #4338ca;"></span>
+                        </div>
+                        <span class="theme-name">Deep Indigo</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="rose">
+                        <div class="theme-colors">
+                            <span style="background: #e11d48;"></span>
+                            <span style="background: #f43f5e;"></span>
+                            <span style="background: #be123c;"></span>
+                        </div>
+                        <span class="theme-name">Rose Pink</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="amber">
+                        <div class="theme-colors">
+                            <span style="background: #d97706;"></span>
+                            <span style="background: #f59e0b;"></span>
+                            <span style="background: #b45309;"></span>
+                        </div>
+                        <span class="theme-name">Amber Gold</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="slate">
+                        <div class="theme-colors">
+                            <span style="background: #475569;"></span>
+                            <span style="background: #64748b;"></span>
+                            <span style="background: #334155;"></span>
+                        </div>
+                        <span class="theme-name">Slate Gray</span>
+                    </button>
+                    
+                    <button class="theme-option" data-theme="emerald">
+                        <div class="theme-colors">
+                            <span style="background: #047857;"></span>
+                            <span style="background: #059669;"></span>
+                            <span style="background: #065f46;"></span>
+                        </div>
+                        <span class="theme-name">Emerald</span>
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <main class="container">
-        <section class="profile">
-            <div class="left">
-                <div class="picture">
-                    <img src="/img/profile-pic.jpg" alt="">
-                    <span>
-                        <i class="uil uil-comment-dots"></i>
-                    </span>
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <div class="mobile-header-content">
+                <div class="mobile-brand">
+                    <h1 class="mobile-name">Inzamam</h1>
+                    <p class="mobile-role">Software Engineer</p>
                 </div>
-
-                <div class="name">
-                    <h2>Md. Inzamam-Ul Haque Sobuz</h2>
-                    <div class="designation">
-                        <span>
-                            <p class="op">Sotfware Engineer</p>
-                            <p class="op">Competitive Programmer</p>
-                            <p class="hide" id="hideDesignation" onclick="moreDesignation()">See more...</p>
-                            <!---<p class="op">Expert coder in Codeforces</p>
-                            <p class="op">5 star coder in Codechef</p>
-                            <p class="op">Knight coder in Leetcode</p>--->
-                        </span>
-                    </div> 
+                <div class="mobile-header-actions">
+                    <button class="mobile-theme-btn" id="mobileThemeBtn" title="Change Theme">
+                        <i class="uil uil-palette"></i>
+                    </button>
+                    <a href="INZAMAM_CV.pdf" class="mobile-cv-icon" target="_blank" title="Download CV">
+                        <i class="uil uil-download-alt"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="uil uil-bars"></i>
+                    </button>
                 </div>
             </div>
+        </header>
 
-            <div class="right">
-                <ul class="contactinfo">
-                    <li>
-                        <i class="uil uil-phone-volume"></i>
-                        +81 70-9312-2383
-                    </li>
-                    <li>
-                        <i class="uil uil-envelope"></i>
-                        inzamamulhaquesobuz655@gmail.com
-                    </li>
-                    <li>
-                        <i class="uil uil-user-location"></i>
-                        Kagoshima, Japan
-                    </li>
-                </ul>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="uil uil-times"></i>
+                </button>
+                
+                <nav class="mobile-nav">
+                    <a href="#intro" class="mobile-nav-item"># intro</a>
+                    <a href="#work" class="mobile-nav-item"># work</a>
+                    <a href="#projects" class="mobile-nav-item"># projects</a>
+                    <a href="#achievements" class="mobile-nav-item"># achievements</a>
+                    <a href="#skills" class="mobile-nav-item"># skills</a>
+                    <a href="#contact" class="mobile-nav-item"># contact</a>
+                </nav>
 
-                <ul class="profile-link">
-                    <li>
+                <div class="mobile-menu-footer">
+                    <div class="mobile-social">
                         <a href="https://github.com/inzamam-inz" target="_blank">
                             <i class="uil uil-github"></i>
                         </a>
-                    </li>
-                    <li>
                         <a href="https://www.linkedin.com/in/inzamam-inz/" target="_blank">
                             <i class="uil uil-linkedin"></i>
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://web.facebook.com/inzamam.sobuz/" target="_blank">
-                            <i class="uil uil-facebook"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="about">
-            <h1 class="section_heading">About Me</h1>
-            <h3 class="inzamam">Hey, I'm Inzamam </h3>
-            <p class="describe">
-                I’m another software engineer with industry experience in developing applications for both web (Nest js, Java Spring Boot) and desktop (WinUI 3), along with hands-on experience in embedded systems. I have a background in competitive programming, which 
-                <span class="hide" id="hideDescribe" onclick="moreDescribe()">see more....</span>
-            </p>
-        </section>
-
-        <section class="education-experience">
-            <h1 class="section_heading">Education & Experience</h1>
-
-            <div class="edu-exp-container">
-                <div class="education">
-                    <div class="heading">
-                        <i class="uil uil-graduation-cap"></i>
-                        <h5>Education</h5>
-                    </div>
-
-                    <div class="schools">
-                        <div class="items">
-                            <h5>BSc in Software Engineering</h5>
-                            <p>University of Dhaka</p>
-                            <p>Jan 2019 - Dec 2023</p>
-                            <p>CGPA : 3.80 / 4.00 </p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Higher Secondary School Certificate</h5>
-                            <p>Cantonment Public School & College, Rangpur</p>
-                            <p>Jul 2016 - Jun 2018</p>
-                            <p>GPA : 5.00 / 5.00</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Secondary School Certificate</h5>
-                            <p>Thakurgaon Govt. Boys' High School</p>
-                            <p>Jun 2010 - Mar 2016</p>
-                            <p>GPA : 5.00 / 5.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience">
-                    <div class="heading">
-                        <i class="uil uil-suitcase-alt"></i>
-                        <h5>Experience</h5>
-                    </div>
-
-                    <div class="jobs">
-                        <div class="items">
-                            <h5>Sotfware Engineer</h5>
-                            <p>ELM Inc.</p>
-                            <p>Jul 2024 - Present</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Sotfware Engineer (Part-time)</h5>
-                            <p>Factoryze</p>
-                            <p>Apr 2024 - Jun 2024</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Sotfware Engineer (Part-time)</h5>
-                            <p>XpeedLab</p>
-                            <p>Jul 2023 - Dec 2023</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Sotfware Engineer, Intern</h5>
-                            <p>Samsung R&D Institute Bangladesh</p>
-                            <p>Jan 2023 - Jun 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-        </section>
-
-        <section class="achievement-skill">
-            <h1 class="section_heading">Achievements & Skills</h1>
-            
-            <div class="achievement-skill-container">
-                <div class="achievement">
-                    <div class="heading">
-                        <i class="uil uil-medal"></i>
-                        <h5>Awards</h5>
-                    </div>
-
-                    <div class="awards">
-                        <div class="items">
-                            <h5>Code Refactoring Competition (DU IIT ITverse 2023)</h5>
-                            <p>2nd (out of 90+)</p>
-                            <p>Team Name: Code Moppers</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Code Samurai 2022(Inter-University Hackathon)</h5>
-                            <p>3rd (out of 500+)</p>
-                            <p>Team Name: DU_Heckers</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Inter University Programming Contest(BUET IUPC 2023)</h5>
-                            <p>10th (out of 100+)</p>
-                            <p>Team Name: মৃন্ময়ী</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>ICPC Asia Dhaka Onsite Regional Contest 2021</h5>
-                            <p>20th (out of 160+)</p>
-                            <p>Team Name: DU_HereForTheFood</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Inter University Programming Contest(SUST IUPC 2023) </h5>
-                            <p>15th (out of 160+)</p>
-                            <p>Team Name: DU_HereForTheFood2.0</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Therap Javafest 2023 </h5>
-                            <p>Finalist (got honorable mention out of 800+ participants)</p>
-                            <p>Team Name: HereWeGo</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>META Hacker Cup 2022</h5>
-                            <p>Won Goodie by finishing in the top 2000 (out of 27,600+)</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Google Hash Code 2022 Online qualification round</h5>
-                            <p>815th (out of 9000+)</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>Google Kick Start 2021 Round B</h5>
-                            <p>353rd (out of 6500+)</p>
-                        </div>
-
-                        <div class="items">
-                            <h5>ITverse(Depertment Fest) Coding compitition 2021</h5>
-                            <p>Champion</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <div class="heading">
-                        <i class="uil uil-check-circle"></i>
-                        <h5>Skills</h5>
-                    </div>
-
-                    <div class="tasks">
-                        <div class="items">
-                            <h5>C, C++, C#, Java, Python</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>Node (NestJs), Java Spring Boot</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>Vue Js, Angular</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>WinUI 3 (C#)</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>MongoDB, SQLite, PostgreSQL</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>ESP32, Arduino, Raspberry pi</h5>
-                        </div>
-
-                        <div class="items">
-                            <h5>Problem Solving</h5>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="project">
-            <h1 class="section_heading">Projects</h1>
-            
-            <div class="project">
-                <div class="heading">
-                    <i class="uil uil-clipboard-notes"></i>
-                    <h5>Projects</h5>
-                </div>
-
-                <div class="tasks">
-                    <div class="items">
-                        <h5>UNISHARE</h5>
-                        <p>Sep 2023</p>
-                        <div class="project-info">
-                            <p>● We have implemented a rental marketplace that will serve university students. I have worked on the Backend in this project.</p>
-                        </div>
-                        <div class="link-info">
-                            <b><p>Source Code: <a href="https://github.com/inzamam-inz/JavaFest-UniShare" target="_blank">GitHub Link</a></b></p>
-                            <b><p>Live Demo: <a href="https://unishare-javafest.vercel.app/" target="_blank">UniShare</a></b></p>
-                            <p>Tool : Next Js, Spring Boot, PostgreSQL</p>                  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tasks">
-                    <div class="items">
-                        <h5>ONLINE EXAM PROCTORING SYSTEM</h5>
-                        <p>Jan 2022 - Mar 2022</p>
-                        <div class="project-info">
-                            <p>● Implemented automated online exam proctoring system in 2-person team using MEAN stack in 3-credits project.</p>
-                            <p>● Consistently keeps eyes on the examinees and tracks if they are trying to change the exam tab or looks outside the screen longer than the
-                                limit specified by the teacher.</p>
-                            <p>● Notifies the teacher if any suspicious activity is found with evidence(camera footage and screen record)</p>
-                        </div>
-                        <div class="link-info">
-                            <b><p>Source Code: <a href="https://github.com/Md-Siam07/notBlink" target="_blank">GitHub Link</a></b></p>
-                            <b><p>Live Demo: <a href="exam.xpeedlab.tech" target="_blank">!Blink</a></b></p>
-                            <p>Tool : Angular, Node Js (Express), MongoDB</p>                  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tasks">
-                    <div class="items">
-                        <h5>CONNECT - 4</h5>
-                        <p>Aug 2022</p>
-                        <div class="project-info">
-                            <p>● Implemented a game with an AI opponent - uses a minimax algorithm with a heuristic search to find the best move.</p>
-                        </div>
-                        <div class="link-info">
-                            <b><p>Source Code: <a href="https://github.com/Md-Arif-Hasan/4-Connect" target="_blank">GitHub Link</a></b></p>
-                            <p>Tool : Python</p>                  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tasks">
-                    <div class="items">
-                        <h5>WUMPUS WORLD - A KNOWLEDGE BASED AI GAME</h5>
-                        <p>Oct 2022</p>
-                        <div class="project-info">
-                            <p>● Play safe as well as take risks when deadlock occurs - by probabilistic reasoning.</p>
-                            <p>● It can render random environments depending on Pit, Wumpus, Gold probability. Also take risky steps when a deadlock situation occurs,
-                                and play the safest possible path when no deadlock situation is there.</p>
-                        </div>
-                        <div class="link-info">
-                            <b><p>Source Code: <a href="https://github.com/inzamam-inz/Wumpus" target="_blank">GitHub Link</a></b></p>
-                            <p>Tool : Angular</p>                  
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="count-up">
-            <div class="count-up-container">
-                <div class="count">
-                    <div>
-                        <i class="uil uil-question-circle"></i>
-                    </div>
-                    <div>
-                        <h3><span class="count1" data-count="1700">1700+</span></h3>
-                        <h5>Problems</h5>
-                    </div>
-                </div>
-
-                <div class="count">
-                    <div>
-                        <i class="uil uil-analysis"></i>
-                    </div>
-                    <div>
-                        <h3><span class="count2" data-count="15">15+</span></h3>
-                        <h5>Online Judges</h5>
-                    </div>
-                </div>
-
-                <div class="count">
-                    <div>
-                        <i class="uil uil-globe"></i>
-                    </div>
-                    <div>
-                        <h3><span class="count3" data-count="250">250+</span></h3>
-                        <h5>Online Contests</h5>
-                    </div>
-                </div>
-
-                <div class="count">
-                    <div>
-                        <i class="uil uil-monitor"></i>
-                    </div>
-                    <div>
-                        <h3><span class="count4" data-count="10">10+</span></h3>
-                        <h5>Onsite Contests</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="online-judge-handle">
-            <h1 class="section_heading">Online Judge Handle Link</h1>
-
-            <div class="oj-handle-container">
-                <div class="handle">
-                    <img src="/img/codeforces.png" alt="Codeforces">
-                    <a href="https://codeforces.com/profile/inzamam_inz" target="_blank">Codeforces</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/codechef.png" alt="Codechef">
-                    <a href="https://www.codechef.com/users/inzamam_inz" target="_blank">Codechef</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/leetcode.png" alt="Leetcode">
-                    <a href="https://leetcode.com/inzamam_inz/" target="_blank">Leetcode</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/atcoder.png" alt="Atcoder">
-                    <a href="https://atcoder.jp/users/inzamam_inz" target="_blank">Atcoder</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/lightoj.png" alt="LightOJ">
-                    <a href="https://lightoj.com/user/inzamam_inz" target="_blank">LightOJ</a>
-                </div>
-
-                <!--
-                <div class="handle">
-                    <img src="/img/hackerrank.png" alt="Hackerrank">
-                    <a href="https://www.hackerrank.com/inzamam_inz" target="_blank">Hackerrank</a>
-                </div>
-                -->
-                
-                <div class="handle">
-                    <img src="/img/hackerearth.png" alt="Hackererarh">
-                    <a href="https://www.hackerearth.com/@inzamam_inz" target="_blank">Hackererarh</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/toph.png" alt="TopH">
-                    <a href="https://toph.co/u/inzamam" target="_blank">TopH</a>
-                </div>
-
-                <!--
-                <div class="handle">
-                    <img src="/img/binary-search.png" alt="BinarySearch">
-                    <a href="https://binarysearch.com/@/inzamam_inz" target="_blank">BinarySearch</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/spoj.png" alt="Spoj">
-                    <a href="https://www.spoj.com/users/inzamam_inz/" target="_blank">Spoj</a>
-                </div>
-
-                <div class="handle">
-                    <img src="/img/acm-timus.png" alt="Timus">
-                    <a href="https://acm.timus.ru/author.aspx?id=302731" target="_blank">Timus</a>
-                </div>
-                -->
-            </div>
-        </section>
-
-        <section class="contact">
-            <h1 class="section_heading">Contact Me</h1>
-
-            <div class="contact-container">
-                <div class="information">
-                    <div class="way">
-                        <div>
-                            <i class="uil uil-phone-volume"></i>
-                        </div>
-                        <div>
-                            <h4>Call Me:</h4>
-                            <span>+81 70-9312-2383</span>
-                        </div>   
-                    </div>
-
-                    <div class="way">
-                        <div>
+                        <a href="mailto:inzamamulhaquesobuz655@gmail.com">
                             <i class="uil uil-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Mail Me:</h4>
-                            <span>inzamamulhaquesobuz655@gmail.com</span>
-                        </div>   
+                        </a>
                     </div>
-
-                    <div class="way">
-                        <div>
-                            <i class="uil uil-map-marker"></i>
-                        </div>
-                        <div>
-                            <h4>Find Me:</h4>
-                            <span>202-3 Miyahara, Kaseda, Minamisatsuma<br>Kagoshima, Japan</span>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="message">
-                    <form action="">
-                        <div class="name-email">
-                            <div>
-                                <label for="">Name</label>  
-                                <input type="text" placeholder="Your name...">
-                            </div>
-                            <div>
-                                <label for="">Email</label>  
-                                <input type="email" placeholder="Your email...">
-                            </div>
-                        </div>
-
-                        <div class="say">
-                            <div>
-                                <label for="">Message</label>  
-                                <textarea name="" id="" cols="30" rows="7" placeholder="Write your message..."></textarea>
-                            </div>
-                        </div>
-                        <div class="send">
-                            <div>
-                                <button onclick="addFeedback()">Send</button>
-                            </div>
-                        </div>
-                    </form>
+                    <a href="INZAMAM_CV.pdf" class="mobile-cv-btn" target="_blank">
+                        <i class="uil uil-download-alt"></i> Download CV
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer class="container">
-        <span> © 2025. All right reserved</span>
-    </footer>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Intro Section -->
+            <section id="intro" class="section">
+                <div class="section-header">
+                    <span class="section-number">01.</span>
+                    <h2 class="section-title">Introduction</h2>
+                </div>
+
+                <div class="content">
+                    <div class="intro-grid">
+                        <div class="visual-preview">
+                            <div class="preview-header">
+                                <span class="preview-title">preview</span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-card">
+                                    <div class="card-header">
+                                        <div class="avatar">I</div>
+                                        <div>
+                                            <div class="card-name">Inzamam</div>
+                                            <div class="card-role">SWE @ ELM Inc.</div>
+                                            <div class="card-location">
+                                                <i class="uil uil-map-marker"></i>
+                                                <span>Kagoshima, Japan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-stats">
+                                        <div class="card-stat">
+                                            <span class="stat-num">1700</span>
+                                            <span class="stat-txt">solved</span>
+                                        </div>
+                                        <div class="card-stat">
+                                            <span class="stat-num">250+</span>
+                                            <span class="stat-txt">contests</span>
+                                        </div>
+                                        <div class="card-stat">
+                                            <span class="stat-num">1.5+</span>
+                                            <span class="stat-txt">years exp</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-tags">
+                                        <span>algorithms</span>
+                                        <span>systems</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="json-preview">
+                            <div class="preview-header">
+                                <span class="preview-title">profile.json</span>
+                            </div>
+                            <pre class="json-code">{
+  <span class="json-key">"name"</span>: <span class="json-string">"Inzamam"</span>,
+  <span class="json-key">"role"</span>: <span class="json-string">"SWE"</span>,
+  <span class="json-key">"company"</span>: <span class="json-string">"ELM Inc."</span>,
+  <span class="json-key">"location"</span>: <span class="json-string">"Kagoshima, Japan"</span>,
+  <span class="json-key">"experience"</span>: <span class="json-string">"1.5+ years"</span>,
+  <span class="json-key">"solved"</span>: <span class="json-number">1700</span>,
+  <span class="json-key">"contests"</span>: <span class="json-number">250</span>,
+  <span class="json-key">"focus"</span>: [
+    <span class="json-string">"algorithms"</span>,
+    <span class="json-string">"systems"</span>
+  ]
+}</pre>
+                        </div>
+                    </div>
+
+                    <p>
+                        I'm a software engineer specializing in backend systems, algorithm optimization, and competitive programming. 
+                        My work involves building scalable applications using modern frameworks like NestJS and Spring Boot, 
+                        while my competitive programming background (1700+ problems solved) sharpens my problem-solving approach.
+                    </p>
+
+                    <p>
+                        Currently developing production systems at ELM Inc., I focus on creating efficient, maintainable code 
+                        that bridges theoretical computer science with practical engineering needs.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">1700+</div>
+                            <div class="stat-label">Problems Solved</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">250+</div>
+                            <div class="stat-label">Contests</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">3.80</div>
+                            <div class="stat-label">CGPA / 4.00</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Platforms</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Section -->
+            <section id="work" class="section">
+                <div class="section-header">
+                    <span class="section-number">02.</span>
+                    <h2 class="section-title">Work Experience</h2>
+                </div>
+
+                <div class="content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Software Engineer</h3>
+                                    <span class="timeline-date">Jul 2024 — Present</span>
+                                </div>
+                                <p class="timeline-company">ELM Inc. · Kagoshima, Japan</p>
+                                <p class="timeline-desc">Full-stack development, system architecture, production deployment</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Software Engineer (Part-time)</h3>
+                                    <span class="timeline-date">Apr 2024 — Jun 2024</span>
+                                </div>
+                                <p class="timeline-company">Factoryze</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Software Engineer (Part-time)</h3>
+                                    <span class="timeline-date">Jul 2023 — Dec 2023</span>
+                                </div>
+                                <p class="timeline-company">XpeedLab</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Software Engineer, Intern</h3>
+                                    <span class="timeline-date">Jan 2023 — Jun 2023</span>
+                                </div>
+                                <p class="timeline-company">Samsung R&D Institute Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-section">
+                        <h3 class="subsection-title">Education</h3>
+                        <div class="education-item">
+                            <div class="edu-header">
+                                <h4>BSc in Software Engineering</h4>
+                                <span class="edu-date">2019 — 2023</span>
+                            </div>
+                            <p class="edu-institution">University of Dhaka, Bangladesh</p>
+                            <p class="edu-grade">CGPA: 3.80 / 4.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <span class="section-number">03.</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                </div>
+
+                <div class="content">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="uil uil-folder-open project-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/inzamam-inz/JavaFest-UniShare" target="_blank">
+                                        <i class="uil uil-github"></i>
+                                    </a>
+                                    <a href="https://unishare-javafest.vercel.app/" target="_blank">
+                                        <i class="uil uil-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">UNISHARE</h3>
+                            <p class="project-desc">
+                                Rental marketplace for university students. Backend infrastructure with authentication, 
+                                listings, and transactions.
+                            </p>
+                            <div class="project-tech">
+                                <span>Next.js</span>
+                                <span>Spring Boot</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="uil uil-folder-open project-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/Md-Siam07/notBlink" target="_blank">
+                                        <i class="uil uil-github"></i>
+                                    </a>
+                                    <a href="http://exam.xpeedlab.tech" target="_blank">
+                                        <i class="uil uil-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Online Exam Proctoring</h3>
+                            <p class="project-desc">
+                                Automated proctoring system with computer vision for behavior tracking, 
+                                tab monitoring, and evidence collection.
+                            </p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>CV</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="uil uil-folder-open project-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/inzamam-inz/Wumpus" target="_blank">
+                                        <i class="uil uil-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Wumpus World AI</h3>
+                            <p class="project-desc">
+                                Knowledge-based agent with probabilistic reasoning for navigation under uncertainty 
+                                and risk assessment.
+                            </p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>AI</span>
+                                <span>Logic</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="uil uil-folder-open project-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/Md-Arif-Hasan/4-Connect" target="_blank">
+                                        <i class="uil uil-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Connect-4 AI</h3>
+                            <p class="project-desc">
+                                Game AI using minimax algorithm with alpha-beta pruning and heuristic evaluation 
+                                for optimal move selection.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Minimax</span>
+                                <span>Game Theory</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements" class="section">
+                <div class="section-header">
+                    <span class="section-number">04.</span>
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+
+                <div class="content">
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <h4>ICPC Asia Dhaka Regional 2021</h4>
+                            <p>Rank 20th / 160+ teams · Team: DU_HereForTheFood</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Code Samurai 2022</h4>
+                            <p>3rd Place / 500+ teams · National Inter-University Hackathon</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Code Refactoring Competition 2023</h4>
+                            <p>2nd Place / 90+ participants · DU IIT ITverse</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>META Hacker Cup 2022</h4>
+                            <p>Top 2000 globally / 27,600+ participants</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Google Kick Start 2021 Round B</h4>
+                            <p>Rank 353rd / 6,500+ participants</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>BUET IUPC 2023</h4>
+                            <p>10th Place / 100+ teams · Team: মৃন্ময়ী</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Google Hash Code 2022</h4>
+                            <p>Rank 815th / 9,000+ teams globally</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Therap Javafest 2023</h4>
+                            <p>Finalist with Honorable Mention / 800+ participants</p>
+                        </div>
+                    </div>
+
+                    <div class="platforms-section">
+                        <h3 class="subsection-title">Competitive Programming Profiles</h3>
+                        <div class="platform-grid">
+                            <a href="https://codeforces.com/profile/inzamam_inz" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/codeforces.png" alt="Codeforces">
+                                </div>
+                                <span class="platform-name">Codeforces</span>
+                            </a>
+                            <a href="https://www.codechef.com/users/inzamam_inz" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/codechef.png" alt="Codechef">
+                                </div>
+                                <span class="platform-name">Codechef</span>
+                            </a>
+                            <a href="https://leetcode.com/inzamam_inz/" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/leetcode.png" alt="LeetCode">
+                                </div>
+                                <span class="platform-name">LeetCode</span>
+                            </a>
+                            <a href="https://atcoder.jp/users/inzamam_inz" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/atcoder.png" alt="AtCoder">
+                                </div>
+                                <span class="platform-name">AtCoder</span>
+                            </a>
+                            <a href="https://lightoj.com/user/inzamam_inz" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/lightoj.png" alt="LightOJ">
+                                </div>
+                                <span class="platform-name">LightOJ</span>
+                            </a>
+                            <a href="https://www.hackerearth.com/@inzamam_inz" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/hackerearth.png" alt="HackerEarth">
+                                </div>
+                                <span class="platform-name">HackerEarth</span>
+                            </a>
+                            <a href="https://toph.co/u/inzamam" target="_blank" class="platform-card">
+                                <div class="platform-logo">
+                                    <img src="/img/toph.png" alt="Toph">
+                                </div>
+                                <span class="platform-name">Toph</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="section-header">
+                    <span class="section-number">05.</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+
+                <div class="content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <div class="skill-tags">
+                                <span>C</span>
+                                <span>C++</span>
+                                <span>C#</span>
+                                <span>Java</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <div class="skill-tags">
+                                <span>NestJS</span>
+                                <span>Spring Boot</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-tags">
+                                <span>Vue.js</span>
+                                <span>Angular</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Desktop</h4>
+                            <div class="skill-tags">
+                                <span>WinUI 3</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Databases</h4>
+                            <div class="skill-tags">
+                                <span>MongoDB</span>
+                                <span>PostgreSQL</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Embedded</h4>
+                            <div class="skill-tags">
+                                <span>ESP32</span>
+                                <span>Arduino</span>
+                                <span>Raspberry Pi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <span class="section-number">06.</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+
+                <div class="content">
+                    <p class="contact-intro">
+                        I'm open to new opportunities, collaborations, and technical discussions. 
+                        Whether you have a question or just want to say hi, feel free to reach out.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="uil uil-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:inzamamulhaquesobuz655@gmail.com">inzamamulhaquesobuz655@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="uil uil-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:+81709312383">+81 70-9312-2383</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="uil uil-map-marker"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>202-3 Miyahara, Kaseda, Minamisatsuma, Kagoshima, Japan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2025 Md Inzamam-Ul Haque Sobuz</p>
+            </footer>
+        </main>
+    </div>
 
     <script src="app.js"></script>
-
 </body>
 
 </html>
-
-
